@@ -14,7 +14,10 @@ def get_all():
     return jsonify(rutas)
 
 @app.route('/api/v1/resources/rutas/<id>', methods=['GET'])
-def get_ruta(id):
-    return jsonify(rutas[0])
+def valor_id(id):
+    for diccionario in rutas:
+        if str(diccionario['id']) == id:
+            return jsonify(diccionario)
+    return "El elemento no existe"
 
 app.run()
