@@ -1,0 +1,12 @@
+rutas = [{'id': 0,
+         'origen': 'Madrid',
+         'destino': 'Castellon de la Plana',
+         'distancia': '423 km',
+         'carga1': 'Villas Viejas',
+         'carga2': 'Requena'},
+         {'id':1,
+             'origen': 'Madrid',
+             'destino': 'Castellon de la Plana',
+             'distancia': '433 km',
+             'carga1': 'Cuenca',
+             'carga2':'Requena'}]
