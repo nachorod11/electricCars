@@ -1,9 +1,13 @@
 from flask import Flask, jsonify, request
 from rutas import rutas
-
+from decouple import config as config_decouple
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+enviroment = config['development']
+app.config.from_object(enviroment)
+if config_decouple('PRODUCTION', default=False):
+    enviroment = config['production']
 
 @app.route('/')
 def home():
